@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+set -euo pipefail
+USER_HOME="${HOME:?HOME must be set}"
+export ZDOTDIR="$USER_HOME/.local/share/nvchad-bootstrap/zdot"
+exec "$USER_HOME/.local/opt/nvchad-tools/bin/zsh" -i "$@"

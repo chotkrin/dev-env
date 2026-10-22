@@ -1,0 +1,16 @@
+# Managed by NvChad bootstrap. No shared system/global dotfiles are modified.
+export PATH="$HOME/.local/bin:$HOME/.local/share/nvchad-bootstrap/npm/bin:$HOME/.local/opt/nvchad-tools/bin:$HOME/.local/opt/miniconda3/condabin:$PATH"
+export ZSH="$HOME/.local/share/nvchad-bootstrap/oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+plugins=(sudo vi-mode git zsh-autosuggestions)
+
+if [[ -f "$ZSH/oh-my-zsh.sh" ]]; then
+  source "$ZSH/oh-my-zsh.sh"
+fi
+
+# Enable 'conda activate' without modifying shell rc files or auto-activating base.
+export CONDA_AUTO_ACTIVATE_BASE=false
+if [[ -x "$HOME/.local/opt/miniconda3/bin/conda" ]]; then
+  eval "$("$HOME/.local/opt/miniconda3/bin/conda" shell.zsh hook)"
+fi

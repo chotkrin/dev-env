@@ -1,0 +1,17 @@
+# Installed only in ~/.local/opt/nvchad-tools (conda-forge, no base activation).
+python=3.12
+pip
+nvim=0.11.*
+nodejs=22.*
+zsh
+git
+ripgrep
+fd-find
+tree-sitter-cli
+stylua
+rust-analyzer
+make
+unzip
+curl
+tmux
+c-compiler
